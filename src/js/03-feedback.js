@@ -31,6 +31,7 @@ function onSubmitForm(e) {
     formData.message = form.elements.message.value
     console.log(formData);
 
+    localStorage.clear()
     form.reset()
  }
 
