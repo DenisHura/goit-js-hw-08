@@ -27,13 +27,19 @@ function onSubmitForm(e) {
     e.preventDefault();
 
 
+    if (form.elements.email.value.trim() === "" || form.elements.message.value.trim() === "") {
+        alert("Необходимо заполнить все поля");
+        return;
+    }
+
     formData.email = form.elements.email.value;
-    formData.message = form.elements.message.value
+    formData.message = form.elements.message.value;
     console.log(formData);
 
-    localStorage.removeItem(LOCALSTORAGE_KEY)
-    form.reset()
- }
+    localStorage.removeItem(LOCALSTORAGE_KEY);
+    form.reset();
+}
+
 
 
 function onUpdateForm() {
